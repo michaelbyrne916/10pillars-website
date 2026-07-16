@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_INFO } from "@/lib/data";
+import { CONTACT_INFO, LEGAL_LINKS } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -147,7 +147,7 @@ export default function Footer() {
             <div style={{ color: "#4A5568", fontSize: 13, lineHeight: 1.8 }}>
               <div>{CONTACT_INFO.email}</div>
               <div>{CONTACT_INFO.phone}</div>
-              <div>{CONTACT_INFO.location}</div>
+              <div>{CONTACT_INFO.mailingAddress}</div>
               <div style={{ marginTop: 16 }}>
                 <Link
                   href="/contact"
@@ -173,19 +173,54 @@ export default function Footer() {
           style={{
             borderTop: "1px solid rgba(255,255,255,0.05)",
             paddingTop: 24,
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flexWrap: "wrap",
-            gap: 12,
           }}
         >
-          <div style={{ fontSize: 12, color: "#2D3748" }}>
-            © 2025 10 Pillars Solutions. All rights reserved.
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 12,
+              marginBottom: 14,
+            }}
+          >
+            <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
+              {LEGAL_LINKS.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  style={{
+                    color: "#4A5568",
+                    fontSize: 12,
+                    textDecoration: "underline",
+                    textUnderlineOffset: 3,
+                  }}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <div style={{ fontSize: 12, color: "#2D3748" }}>
+              © 2026 10 Pillars Solutions. All rights reserved.
+            </div>
           </div>
-          <div style={{ fontSize: 12, color: "#2D3748" }}>
-            AI-Enabled · Human-Led · 25+ Years Experience
-          </div>
+          <p
+            style={{
+              fontSize: 11,
+              lineHeight: 1.7,
+              color: "#2D3748",
+              margin: 0,
+              maxWidth: 900,
+            }}
+          >
+            10 Pillars Solutions is an Equal Opportunity Employer. All qualified applicants
+            receive consideration for employment without regard to race, color, religion, sex,
+            sexual orientation, gender identity, national origin, disability, or protected veteran
+            status. California residents: see our Privacy Policy for your rights under the
+            CCPA/CPRA. We do not sell personal information. CA Certified Small Business — SB
+            #2038866.
+          </p>
         </div>
       </div>
     </footer>
