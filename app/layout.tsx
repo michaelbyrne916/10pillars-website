@@ -9,6 +9,8 @@ const ORG_SCHEMA = {
   "@id": "https://www.10pillarssolutions.com/#organization",
   name: "10 Pillars Solutions",
   url: "https://www.10pillarssolutions.com",
+  logo: "https://www.10pillarssolutions.com/logo.png",
+  image: "https://www.10pillarssolutions.com/logo.png",
   description:
     "Human-led staffing and workforce solutions firm delivering qualified IT, STEM, finance, construction management, and sales talent across California. CA Certified Small Business (SB #2038866).",
   founder: { "@type": "Person", name: "Michael Byrne", jobTitle: "Founder" },
