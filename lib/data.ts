@@ -181,5 +181,12 @@ export const CONTACT_INFO = {
   email: "michael@10pillarssolutions.com",
   phone: "916-420-7006",
   location: "Sacramento, CA",
+  mailingAddress: "PO Box 122, Carmichael, CA 95608",
   responseTime: "We respond within 1 business day",
 };
+
+export const LEGAL_LINKS = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
+  { label: "Equal Employment Opportunity", href: "/eeo" },
+];
